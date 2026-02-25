@@ -62,7 +62,7 @@
         "nutrition": ${data.foodNutritionalValue},
         "saturation_modifier": ${data.foodSaturation},
         "can_always_eat": ${data.foodCanAlwaysEat}
-        <#if !data.usingConvertsTo.isEmpty()>,
+        <#if data.usingConvertsTo?? && !data.usingConvertsTo.isEmpty()>,
         "using_converts_to": "${mappedMCItemToRegistryNameNoTags(data.usingConvertsTo)}"
         </#if>
       },
